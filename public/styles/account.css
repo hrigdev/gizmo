@@ -6,8 +6,11 @@
     flex-direction: column;
     align-items: center;
     gap:2rem;
-}
 
+}
+body{
+    background-color: white;
+}
 .header{
     font-size:4rem;
     text-align: left;
@@ -104,6 +107,7 @@
     gap: 2rem;
     padding:1rem;
 
+
 }
 
 .order{
@@ -111,6 +115,10 @@
     height:80%;
     width:20%;
 
+}
+.order img{
+    width:100%;
+    height: auto;
 }
 
 
@@ -130,12 +138,36 @@
 }
 
 #order-detail-card{
-    color:black;
+    color:white;
     backdrop-filter: blur(3px);
-    display: none;
+    position: fixed;
+    height: 200%;
+    top:0;
+
+
 
 }
 
+.c1{
+    opacity: 0;
+    transition: all .2s ease-in;
+    z-index: -1;
+
+}
+
+.visible{
+    align-items: center;
+    opacity: 1;
+    z-index: 2;
+    transition: all .2s ease-in;
+}
+
+
+
+.details-card{
+    position: relative;
+    top:7rem;
+}
 
 .info-card{
     width:100%;
@@ -158,9 +190,11 @@
 
 .info{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     border-bottom: 1px solid gray;
+    padding-bottom: 1.2rem;
     gap:1rem;
+    justify-content: space-between;
 }
 
 .title{
@@ -168,9 +202,9 @@
     font-weight: bold;
 }
 
-.value{
+.button-container{
+    float: right;
     display: inline;
-    float: left;
 }
 
 .info:last-child{
@@ -178,22 +212,36 @@
 }
 
 .button{
-    display: flex;
+    display: inline;
+    float: right;
     justify-content: end;
 }
 
 .edit{
     width:4rem;
     height: 2rem;
-    position: relative;
-    top:-1rem;
     background-color: black;
     border: none;
     color:white;
     border-radius: 20px;
+    position: relative;
+    right:1rem;
+    top:.5rem;
 }
 
 
-form{
-    background-color: orange;
+.value{
+    display: flex;
+    flex-direction: column;
+    gap:.4rem;
 }
+
+.update{
+    position: absolute;
+    right:0;
+    top:-17px
+   
+}
+
+
+
