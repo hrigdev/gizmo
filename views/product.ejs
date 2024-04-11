@@ -13,17 +13,13 @@
     <div class="card-container">
         <div class="product-card">
             <div class="product-picture">
-                <img src="/images/a.png">
+                <img class="pro" src="/images/a.png">
 
             </div>
             <div class="product-alternate-pictures">  
-                <div class="alt"><img src="/images/a.png"></div>
-                <div class="alt"><img src="/images/a.png"></div>
-                <div class="alt"><img src="/images/a.png"></div>
-                <div class="alt"><img src="/images/a.png"></div>
+                <div class="alt"><a class="alt-pic" href="#"><img src="/images/aa.jpg"></div></a>
+                <div class="alt"><a href="#" class="alt-pic"><img src="/images/a.png"></div></a>
              
-             
-                <div class="alt"><img src="/images/a.png"></div>
 
             </div>
             <div class="product-name">
@@ -65,24 +61,41 @@
             </div>
                
         </div>
-        <div class="card-container2">
-            <div class="img-container1"><img src="/images/d.png"></div>
-            <div class="img-container2"><img src="/images/e.png"></div>
-            <div class="img-container3"><img src="/images/f.png"></div>
-            <div class="img-container4"><img src="/images/g.png"></div>
-            <div class="img-container5"><img src="/images/gg.png"></div>
-        </div>  
+
         <!--  
         <div class="reviews">
             <div class="rev-container">
                 <div class="username">hrigdev</div>
                 <div class="comment">good</div>
             </div>
+               <div class="img-container1"><img src="/images/d.png"></div>
+            <div class="img-container2"><img src="/images/g.png"></div>
+            <div class="img-container3"><img src="/images/gg.png"></div>
         </div>-->
 
         </div>
+        <div class="c">
+        <div class="cont">
+            <div class="img-cont1"><img src="/images/d.png"></div>
+            <div class="img-cont2"><img src="/images/e.png"></div>
+            <div class="img-cont3"><img src="/images/f.png"></div>
+            <div class="img-cont4"><img src="/images/g.png"></div>
+
+        </div>
+        </div>
       
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        $(".alt-pic").on("click", function() {
+            var pic = $(".pro");
+            pic.attr("src", $(this).find("img").attr("src")); // Update the src attribute
+        });
+    });
+</script>
+
 </html>
 
 
