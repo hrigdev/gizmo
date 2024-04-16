@@ -1,0 +1,52 @@
+<%- include("partials/navbar.ejs") -%>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <script src="https://kit.fontawesome.com/eb033ec4b9.js" crossorigin="anonymous"></script>
+    <link href="/styles/checkout.css" rel="stylesheet">
+<body>
+
+    <main>
+        <div class="cart">
+            <h2>Your Cart</h2>
+            <div class="product">
+                <img src="product1.jpg" alt="Product 1">
+                <div class="product-details">
+                    <h3>Product 1</h3>
+                    <p>Description of the product</p>
+                    <p>Price: INR.70,999</p>
+                    <form class="del" method="delete" action="/buy">
+                        <button class="remove-button">Remove</button>
+                    </form>
+                    <form class="del" method="post" action="/buy">
+                        <button class="confirm-button" id="myButton">BUY</button>
+                    </form>
+                    <p id="message" style="display: none;">Your order is confirmed. Thank you for shopping with us. <br> Click <a href="Main.html">here</a> to purchase any other item.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <ul class="icons">
+            <li><a class="linkedin" href="https://www.linkedin.com" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+            <li><a class="facebook" href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
+            <li><a class="twitter" href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></li>
+            <li><a class="instagram" href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a class="email" href="mailto:gizmogrove@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i></a></li>
+        </ul>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+
+    document.getElementById('myButton').addEventListener('click', function() {
+      var message = document.getElementById('message');
+      message.style.display = 'block';
+    });
+    </script>
+</body>
+</html>

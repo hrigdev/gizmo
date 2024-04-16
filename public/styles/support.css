@@ -1,5 +1,124 @@
-.contact-form{
-    position: absolute;
-    top:10rem;
-    left:10rem;
-}
+
+main {
+    padding: 20px;
+  }
+  
+  .contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+    margin-top:10rem;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid gray;
+
+  }
+  
+  .submit1 {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .b{
+    display: flex;
+    justify-content: center;
+  }
+  .submit1:hover {
+    background-color: #45a049;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  body{
+      margin:0;
+      padding:0;
+      font-family:Arial, Helvetica, sans-serif;
+      overflow-x: hidden;
+  
+  }
+  
+  
+  input[type="submit"]{
+      background-color: #ffffff80;
+      height: 8vh;
+      border:none;
+      width:10vw;
+      color:white;
+      font-size: 30px;
+  }
+  .nav-link{
+      text-decoration: none;
+      color:white;
+  }
+  .support-section{
+      font-size:20px;
+      margin-top:0;
+      position: relative;
+      top:-60px;
+  }
+  
+  footer{
+      margin-top: 0px;
+      margin-bottom: 0px;
+      margin-left:0px;
+      margin-right: 0px;
+      width:auto;
+      height:5vh;
+      width: 100vw;;
+      background-color:black;
+      text-align: center;
+      padding:10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      left:0;
+      clear: both; /* Added this line */
+      position: absolute;
+      bottom:0;
+      z-index: 1;
+      margin-top:3rem;
+  }
+  
+  ul.icons {
+      padding:10px;
+  }
+  
+  ul.icons li {
+      display:inline-block;
+      text-align: center;
+      padding-left: 0px;
+      padding-right: 1px;
+  }
+  
+  ul.icons li a {
+      display:block;
+      border-radius:100%;
+      margin:0;
+      padding:0.5em;
+      border: solid 1px white;
+      color:white;
+  }
+  
+  ul.icons li a:hover {
+      background-color: white;
+      color:rgb(13, 12, 12);
+  }
+  
+  ul.icons li:last-child {
+      padding-right: 0;
+  }

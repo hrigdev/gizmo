@@ -10,53 +10,54 @@
 
 </head>
 <body>
+    <main>
+        <% var source= image %>
+
     <div class="card-container">
         <div class="product-card">
             <div class="product-picture">
-                <img class="pro" src="/images/a.png">
+                <img class="pro" src="<%=source%>/main/a.png">
 
             </div>
             <div class="product-alternate-pictures">  
-                <div class="alt"><a class="alt-pic" href="#"><img src="/images/aa.jpg"></div></a>
-                <div class="alt"><a href="#" class="alt-pic"><img src="/images/a.png"></div></a>
+                <div class="alt"><a class="alt-pic" href="#"><img src="<%=source%>/main/a.png"></div></a>
+                <div class="alt"><a href="#" class="alt-pic"><img src="<%=source%>/main/aa.png"></div></a>
              
 
             </div>
             <div class="product-name">
-                Iphone 15 <span class="seller">Apple</span>
+                <%=details.name %><span class="seller"><%=details.brand %></span>
             </div>
             <div class="product-description">
-                    <h2>Specifications:</h2>
+                    <h1>Specifications:</h1>
                     <ul>
-                      <li><strong>Display:</strong> 6.1-inch Super Retina XDR display</li>
-                      <li><strong>Resolution:</strong> 2532 x 1170 pixels, 460 ppi</li>
-                      <li><strong>Processor:</strong> A15 Bionic chip with 6-core CPU, 5-core GPU</li>
-                      <li><strong>Storage Options:</strong> 128GB, 256GB, 512GB, and 1TB</li>
-                      <li><strong>RAM:</strong> Not officially disclosed by Apple, but typically around 6GB or more</li>
-                      <li><strong>Rear Cameras:</strong> Triple 12MP camera system (ultra-wide, wide, telephoto)</li>
-                      <li><strong>Front Camera:</strong> 12MP TrueDepth camera</li>
-                      <li><strong>Video Recording:</strong> Up to 4K Dolby Vision HDR recording at 60 fps</li>
-                      <li><strong>Battery Life:</strong> Up to 75 hours audio playback, up to 22 hours talk time (on 5G), up to 15 hours video playback</li>
-                      <li><strong>Operating System:</strong> iOS 15 (at the time of release)</li>
-                      <li><strong>Connectivity:</strong> 5G capable, Wi‑Fi 6 (802.11ax), Bluetooth 5.0, NFC with reader mode</li>
-                      <li><strong>Water and Dust Resistance:</strong> Rated IP68 (maximum depth of 6 meters up to 30 minutes)</li>
-                      <li><strong>Colors:</strong> Available in graphite, gold, silver, and sierra blue</li>
-                      <li><strong>Dimensions:</strong> 146.7 x 71.5 x 7.65 mm</li>
-                      <li><strong>Weight:</strong> 204 grams</li>
-                      
+                        <% spec.forEach((element)=>{%>
+                      <li><strong><%= element.specname %>:</strong><%= element.spec %></li>
+                        <% })%>
                     </ul>
                   
             </div>
             <div class="buy-card">
-                <div class="price">Rs.4999</div>
+                <div class="price"><%=details.price %></div>
                 <div class="user-address">Ship to <span class="address">address</span></div>
                 <div class="details">
                     <div class="ship-from">Ships from Gizmo Groove</div>
-                    <div class="sold-by">Sold by Apple</div>
+                    <div class="sold-by">Sold by <%=details.brand %></div>
                 </div>
                 <div class="buttons">
-                    <button class="buy-now">Buy now</button>
-                    <button class="buy">Add to cart</button>
+                    <form action="/product" method="post">
+                        <input type="hidden" name="product_id" value="<%= details.id%>">
+                        <div class="b">
+                        <button value="add" class="buy add">Add to cart</button>
+                        </div>
+                    </form>
+                    <form action="/shop" method="post">
+                        <input type="hidden" name="product_id" value="<%= details.id%>">
+                        <div class="bb">
+                            <button value="buy-now" class="buy-now">Buy now</button>
+                        </div>
+                    </form>
+
                 </div>
             </div>
                
@@ -76,15 +77,16 @@
         </div>
         <div class="c">
         <div class="cont">
-            <div class="img-cont1"><img src="/images/d.png"></div>
-            <div class="img-cont2"><img src="/images/e.png"></div>
-            <div class="img-cont3"><img src="/images/f.png"></div>
-            <div class="img-cont4"><img src="/images/g.png"></div>
+            <div class="img-cont1"><img src="<%=source%>/others/1.png"></div>
+            <div class="img-cont2"><img src="<%=source%>/others/2.png"></div>
+            <div class="img-cont3"><img src="<%=source%>/others/3.png"></div>
+            <div class="img-cont4"><img src="<%=source%>/others/4.png"></div>
 
         </div>
         </div>
-      
+      </main>
 </body>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
 <script>
@@ -93,6 +95,8 @@
             var pic = $(".pro");
             pic.attr("src", $(this).find("img").attr("src")); // Update the src attribute
         });
+
+
     });
 </script>
 

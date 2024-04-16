@@ -50,8 +50,8 @@
                     <div class="value">
                     <div class="title">Name</div>
                         <form class="item" action="/add" method="post">
-                            <div class="val" id="val1">hrigdev@gmail.com</div>
-                            <input type="text" id="input1" hidden="true" name="newItem" placeholder="Enter name" autocomplete="off" autofocus="true" />
+                            <div class="val" id="val1"><%= details.name%></div>
+                            <input type="text" id="input1" hidden="true" name="name" value="<%= details.name%>" placeholder="Enter name" autocomplete="off" autofocus />
                             <button class="edit update" id="done1" type="submit" hidden>update</button>
                         </form>
                         
@@ -64,11 +64,11 @@
                 </div>
                 <div class="info">
                     <div class="value">
-                        <div class="title">Name</div>
+                        <div class="title">Username</div>
                         <form class="item" action="/add" method="post">
-                            <div class="val" id="val2">hrigdev@gmail.com</div>
-                            <input type="text" id="input2" hidden="true" name="newItem" placeholder="Enter name" autocomplete="off" autofocus="true" />
-                            <button class="edit update" id="done2" type="submit" hidden>update</button>
+                            <div class="val" id="val2"><%= details.username%></div>
+                            <input value="<%= details.username%>"type="text" id="input2" hidden="true" name="username" placeholder="Enter username" autocomplete="off" autofocus/>
+                            <button class="edit e1 update" id="done2" type="submit" hidden>update</button>
                         </form>
                     </div>
                     <div class="button-container">
@@ -80,16 +80,16 @@
                 
                 <div class="info">
                     <div class="value">
-                        <div class="title">Name</div>
+                        <div class="title">Email</div>
                         <form class="item" action="/add" method="post">
-                            <div class="val" id="val3">hrigdev@gmail.com</div>
-                            <input type="text" id="input3" hidden="true" name="newItem" placeholder="Enter name" autocomplete="off" autofocus="true" />
-                            <button class="edit update" id="done3" type="submit" hidden>update</button>
+                            <div class="val" id="val3"><%= details.email%></div>
+                            <input value="<%= details.email%>"type="text" id="input3" hidden="true" name="email" placeholder="Enter email" autocomplete="off" autofocus />
+                            <button class="edit e2 update" id="done3" type="submit" hidden>update</button>
                         </form>
                     </div>
                     <div class="button-container">
                         <div class="button">
-                            <button onclick="handler(3)" class="edit" id="edit3">edit</button>
+                            <button onclick="handler(3)" class="edit " id="edit3">edit</button>
                         </div>
                     </div>
                 </div>
@@ -99,11 +99,11 @@
          
                 <div class="info">
                     <div class="value">
-                    <div class="title">Name</div>
+                    <div class="title">Password</div>
                         <form class="item" action="/add" method="post">
-                            <div class="val" id="val4">hrigdev@gmail.com</div>
-                            <input type="text" id="input4" hidden="true" name="newItem" placeholder="Enter name" autocomplete="off" autofocus="true" />
-                            <button class="edit update" id="done4" type="submit" hidden>update</button>
+                            <div class="val" id="val4">.....</div>
+                            <input type="password" id="input4" hidden="true" name="password" placeholder="Enter password" autocomplete="off" autofocus/>
+                            <button class="edit e3 update" id="done4" type="submit" hidden>update</button>
                         </form>
                         
                     </div>
@@ -133,11 +133,16 @@
                 </div>
             </div>
             <div class="order-history">
-                <div class="card-header">Order History</div>
+                <div class="card-header">Cart</div>
                 <div class="order-detail">
                     <div class="order">
 
                     </div>
+                </div>
+                <div class="checkout">
+                    <form method="put" class="checkout-form" action="/buy">
+                        <input type="submit" class="checkout" value="checkout">
+                    </form>
                 </div>
             </div>
         </div>
@@ -165,6 +170,22 @@
         $(".close").on("click", function() {
             $(".c1").removeClass("visible");
         });
+
+
+    
+        $(".action").on("click", function() {
+            $(".c1").addClass("visible");            
+            $(".c11").attr("hidden",true);
+            
+
+            });
+
+
+ 
+        $(".close1").on("click", function() {
+            $(".c1").removeClass("visible");
+        }); 
+
     });
 
 </script>

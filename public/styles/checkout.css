@@ -1,0 +1,95 @@
+main {
+    padding: 50px;
+}
+
+.cart {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.product {
+    display: flex;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.product img {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+}
+
+.product-details {
+    flex-grow: 1;
+}
+
+.product-details h3 {
+    margin-top: 0;
+}
+
+.remove-button {
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.confirm-button {
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+footer{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left:0px;
+    margin-right: 0px;
+    width:auto;
+    height:5vh;
+    width: 100vw;;
+    background-color:black;
+    text-align: center;
+    padding:10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left:0;
+    clear: both; /* Added this line */
+    position: fixed;
+    bottom:0;
+    z-index: 1;
+    margin-top:3rem;
+}
+
+ul.icons {
+    padding:10px;
+}
+
+ul.icons li {
+    display:inline-block;
+    text-align: center;
+    padding-left: 0px;
+    padding-right: 1px;
+}
+
+ul.icons li a {
+    display:block;
+    border-radius:100%;
+    margin:0;
+    padding:0.5em;
+    border: solid 1px white;
+    color:white;
+}
+
+ul.icons li a:hover {
+    background-color: white;
+    color:rgb(13, 12, 12);
+}
+
+ul.icons li:last-child {
+    padding-right: 0;
+}

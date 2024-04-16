@@ -38,7 +38,7 @@ body{
 }
 
 .product-picture img{
-    width: 100%;
+    width: 70%;
     height:auto;
 }
 
@@ -86,6 +86,7 @@ body{
     align-items: end;
     justify-content: space-between;
     padding-right:.5rem;
+    width: 90%;
     
 }
 .seller{
@@ -104,15 +105,15 @@ body{
 .buy-card{
     grid-area:2/4/3/5;
     border:solid 1px gray;
-    height:39%;
+    height:17rem;
     display:flex;
     flex-direction: column;
     padding:1rem;
     align-items: center;
     gap:1rem;
-    position: relative;
-    right:0;
-    bottom:3rem;
+    right: 5rem;
+    top:8rem;
+    position: absolute;
 }
 
 
@@ -121,7 +122,7 @@ body{
 }
 
 .price{
-    font-size:3rem;
+    font-size:2rem;
     text-align: left;
 }
 
@@ -150,7 +151,6 @@ body{
     border-radius: 20px;
     border:none;
     width: 80%;
-    background-color: orange;
     font-size: 1rem;
 }
 
@@ -214,3 +214,29 @@ body{
     width: 100%;
     height: auto;
 }
+
+.b button{
+    text-align: center;
+    width: 125%;
+    background-color: orange;
+
+}
+
+
+.bb{
+    width: 100%;
+}
+
+
+.bb button{
+    width: 100%;
+}
+
+
+
+
+
+.product-description li{
+    margin-bottom: 1rem;
+}
+

@@ -1,15 +1,19 @@
 <%- include("partials/navbar.ejs") %>
-<%- include("partials/footer.ejs") %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Support Page</title>
+  <script src="https://kit.fontawesome.com/eb033ec4b9.js" crossorigin="anonymous"></script>
   <link href="/styles/support.css" rel="stylesheet">
 </head>
 <body>
-<main>
+
+
+
+  <main>
     <div class="contact-form">
       <h2>Contact Us</h2>
       <form id="supportForm" onsubmit="submitForm(event)">
@@ -21,35 +25,57 @@
 
         <label for="query">Query:</label><br>
         <textarea id="query" name="query" rows="4" cols="50" required></textarea><br><br>
+        <div class="b">
+          <button class="submit1" type="submit">Submit</button>
 
-        <button type="submit">Submit</button>
+        </div>
       </form>
     </div>
   </main>
-<script>
+  <footer class="footer">
+    <ul class="icons">
+        <li><a class="linkedin" href="https://www.linkedin.com" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+        <li><a class="facebook" href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
+        <li><a class="twitter" href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></li>
+        <li><a class="instagram" href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+        <li><a class="email" href="mailto:gizmogrove@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i></a></li>
+    </ul>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+  <script>
     // script.js
+
 function submitForm(event) {
   event.preventDefault(); // Prevent form from submitting normally
+
   // Get form values
   const name = document.getElementById('name').value;
   const email = document.getElementById('email').value;
   const query = document.getElementById('query').value;
+
   // Simple email validation
   if (!validateEmail(email)) {
     alert('Please enter a valid email address.');
     return;
   }
+
   // Simulate sending form data to server (replace this with your actual form submission)
   console.log('Name:', name);
   console.log('Email:', email);
   console.log('Query:', query);
+
   // Reset form fields
   document.getElementById('supportForm').reset();
 }
+
 function validateEmail(email) {
   const re = /\S+@\S+\.\S+/;
   return re.test(email);
 }
+
   </script>
 </body>
 </html>
+
